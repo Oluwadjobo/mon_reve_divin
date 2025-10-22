@@ -1,5 +1,5 @@
 
-//import React from 'react';
+import React from 'react';
 import { CartProvider } from './context/CartContext';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
