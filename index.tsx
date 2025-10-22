@@ -1,26 +1,12 @@
+/** @jsx React.createElement */
+/** @jsxFrag React.Fragment */
 
-//import './index.css';
-//import React from 'react';
-//import ReactDOM from 'react-dom/client';
-import App from './App';
+import App from './App.tsx';
 
-/*const rootElement = document.getElementById('root');
-if (!rootElement) {
-  throw new Error("Could not find root element to mount to");
-}
-
-const root = ReactDOM.createRoot(rootElement);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);*/
 const rootElement = document.getElementById('root');
-if (!rootElement) {
-  throw new Error("Could not find root element to mount to");
-}
+if (!rootElement) throw new Error('Could not find root element to mount to');
 
-// Avec UMD React 18, createRoot est sur ReactDOM global
+// ReactDOM vient du build UMD chargé dans index.html
 const root = (ReactDOM as any).createRoot(rootElement);
 root.render(
   <React.StrictMode>
