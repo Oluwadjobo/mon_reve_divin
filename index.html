@@ -24,11 +24,23 @@
         min-height: 100vh;
       }
     </style>
+    <!-- React UMD -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Babel standalone (gère JSX + TypeScript dans le navigateur) -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
 <link rel="stylesheet" href="./index.css">
 </head>
   <body class="bg-brand-cream text-brand-brown-dark">
     <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
+    <!-- <script type="module" src="./index.tsx"></script> -->
+    <script
+    type="text/babel"
+    data-type="module"
+    data-presets="react,typescript"
+    src="./index.tsx">
+  </script>
   </body>
 </html>
