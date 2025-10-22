@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useCart } from '../context/CartContext';
 import { ShoppingBag, Menu, X } from 'lucide-react';
+import { assetUrl } from '@/utils/helpers';
 
 const Header: React.FC = () => {
   const { getItemCount } = useCart();
@@ -24,7 +25,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <a href="#" className="flex items-center space-x-2">
-            <img src="/logo-mrd.jpeg" alt="Logo Mon Rêve Divin" className="h-12 w-12 sm:h-14 sm:w-14 object-contain" />
+            <img src={assetUrl("/logo-mrd.jpeg")} alt="Logo Mon Rêve Divin" className="h-12 w-12 sm:h-14 sm:w-14 object-contain" />
             <span className="text-xl font-bold font-serif text-brand-brown-dark tracking-tight hidden sm:block">
               Mon Rêve Divin
             </span>
