@@ -6,11 +6,11 @@ const AboutSection: React.FC = () => {
     <section id="a-propos" className="py-16 sm:py-24 bg-brand-cream">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
-            <img 
-              src="/chef.jpg" 
-              alt="Chef Mon Rêve Divin" 
-              className="rounded-2xl shadow-xl w-full h-auto object-cover"
+          <div className="overflow-hidden rounded-2xl shadow-xl">
+            <img
+              src="/chef.png"
+              alt="Chef Mon Rêve Divin"
+              className="w-full h-64 sm:h-80 md:h-full object-cover block"
             />
           </div>
           <div className="text-center md:text-left">
