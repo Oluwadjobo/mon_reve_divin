@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { useCart } from '../context/CartContext';
-import { generateWhatsAppLink } from '../utils/helpers';
+import { assetUrl, generateWhatsAppLink } from '../utils/helpers';
 import { Trash2, Plus, Minus, MessageSquare, ShoppingBag } from 'lucide-react';
 
 const OrderSection: React.FC = () => {
@@ -60,7 +60,7 @@ const OrderSection: React.FC = () => {
               <div className="space-y-4">
                 {cartItems.map(item => (
                   <div key={item.id} className="flex items-start gap-4 p-3 bg-white rounded-lg shadow-sm">
-                    <img src={item.product.image || 'https://picsum.photos/100/100'} alt={item.product.nom} className="w-16 h-16 rounded-md object-cover"/>
+                    <img src={assetUrl(item.product.image) || 'https://picsum.photos/100/100'} alt={item.product.nom} className="w-16 h-16 rounded-md object-cover"/>
                     <div className="flex-grow">
                       <p className="font-bold">{item.product.nom}</p>
                       <div className="flex items-center gap-2 mt-1">

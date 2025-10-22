@@ -8,3 +8,8 @@ export const encodeWhatsAppMessage = (message: string): string => {
 export const generateWhatsAppLink = (message: string): string => {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeWhatsAppMessage(message)}`;
 };
+
+export function assetUrl(path: string) {
+  const clean = path.replace(/^\//, '');
+  return new URL(clean, import.meta.env.BASE_URL).toString();
+}

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { PHONE_NUMBER_1, PHONE_NUMBER_2 } from '../constants';
-import { generateWhatsAppLink } from '../utils/helpers';
+import { assetUrl, generateWhatsAppLink } from '../utils/helpers';
 import { Phone, MessageSquare } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
     <section
       id="accueil"
       className="relative text-center py-20 sm:py-32 px-4 bg-no-repeat bg-center bg-contain sm:bg-cover"
-      style={{ backgroundImage: "url('/logo-mrd.jpeg')" }}
+      style={{ backgroundImage: assetUrl('/logo-mrd.jpeg') }}
     >
       <div className="absolute inset-0 bg-brand-cream/80"></div>
       <div className="relative z-10 max-w-3xl mx-auto">

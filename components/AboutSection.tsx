@@ -1,4 +1,5 @@
 
+import { assetUrl } from '@/utils/helpers';
 import React from 'react';
 
 const AboutSection: React.FC = () => {
@@ -8,7 +9,7 @@ const AboutSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="overflow-hidden rounded-2xl shadow-xl">
             <img
-              src="/chef.png"
+              src={assetUrl('/chef.png')}
               alt="Chef Mon Rêve Divin"
               className="w-full h-64 sm:h-80 md:h-full object-cover block"
             />

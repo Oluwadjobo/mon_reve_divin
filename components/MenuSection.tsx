@@ -2,7 +2,7 @@
 import React, { useState, useMemo } from 'react';
 import { DEFAULT_PRODUCTS } from '../constants';
 import { Product } from '../types';
-import { generateWhatsAppLink } from '../utils/helpers';
+import { assetUrl, generateWhatsAppLink } from '../utils/helpers';
 import { useCart } from '../context/CartContext';
 import { Plus, Minus, Search, ShoppingCart, MessageSquare, ShieldAlert } from 'lucide-react';
 
@@ -22,7 +22,7 @@ const ProductCard: React.FC<{ product: Product; }> = ({ product }) => {
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     console.error(`Image loading failed for ${product.nom}:`, product.image);
     setImgError(true);
-    e.currentTarget.src = '/menu/placeholder.png';
+    e.currentTarget.src = assetUrl('/menu/placeholder.png');
   };
 
   const handleAddToCart = () => {
@@ -40,7 +40,7 @@ const ProductCard: React.FC<{ product: Product; }> = ({ product }) => {
     <div className={`flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 ${!product.actif ? 'opacity-50 grayscale' : ''}`}>
         <div className="relative w-full h-48 bg-gray-100">
           <img
-            src={imgError ? '/menu/placeholder.png' : product.image}
+            src={imgError ? assetUrl('/menu/placeholder.png') : assetUrl(product.image)}
             alt={product.nom}
             className="w-full h-full object-cover object-center"
             loading="lazy"
