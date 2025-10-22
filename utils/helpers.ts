@@ -11,5 +11,5 @@ export const generateWhatsAppLink = (message: string): string => {
 
 export function assetUrl(path: string) {
   const clean = path.replace(/^\//, '');
-  return new URL(clean, import.meta.env.BASE_URL).toString();
+  return `${import.meta.env.BASE_URL}${clean}`;
 }
